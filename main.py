@@ -1,8 +1,7 @@
 from utahapi import *
 
 def main():
-    print('hello')
-    print(get_bill_info(bill_name='HB0014'))
+    download_pdf('https://le.utah.gov/~2024/bills/static/HB0014.html', 'HB0014')
 
 if __name__ == "__main__":
     raise SystemExit(main())
