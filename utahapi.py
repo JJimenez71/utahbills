@@ -3,9 +3,8 @@ import os
 from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 
-
 load_dotenv()
-utah_key = os.getenv('API_KEY')
+utah_key = os.getenv('UTAH_API_KEY')
 
 def get_bill_list():
     url = f"https://glen.le.utah.gov/bills/2024GS/billlist/{utah_key}"
@@ -33,3 +32,5 @@ def download_pdf(url: str, bill_name: str):
                 pdf = open(bill_name+".pdf", 'wb')
                 pdf.write(bill_response.content)
                 pdf.close()
+
+
